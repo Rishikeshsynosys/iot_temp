@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import "tailwindcss";
+
+* {
+  scroll-behavior: smooth;
+}
+
+@layer utilities {
+  ::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+  }
+
+  /* Firefox */
+  * {
+    scrollbar-width: none;
+  }
+}
+
+@layer base {
+  body {
+    font-family: "Inter", sans-serif;
+  }
+  h1 {
+    @apply font-semibold;
+  }
+}
+
+.container-1200 {
+  @apply w-full lg:max-w-[1200px] p-2;
+}
+
+.flex-row-center {
+  @apply flex items-center justify-center;
+}
+
+.flex-row-between {
+  @apply flex items-center justify-between;
+}
+
+.flex-row-around {
+  @apply flex items-center justify-around;
+}
+
+.flex-col-between {
+  @apply flex flex-col justify-between;
+}
+
+.flex-col-center {
+  @apply flex flex-col justify-center;
+}
+
+.flex-col-around {
+  @apply flex flex-col justify-around;
+}
+
+.flex-col-start {
+  @apply flex flex-col justify-start;
+}
+
+.btn {
+  @apply flex justify-center px-4 border border-transparent rounded-sm shadow-sm text-sm cursor-pointer font-medium focus:outline-none;
+}
+
+.blue-btn {
+  @apply text-white bg-blue-600 hover:bg-blue-700;
+}
+
+.white-btn{
+  @apply bg-white text-gray-500
+}
+
+.bg-blue {
+  @apply bg-[#004cf4];
+}
+
+.bg-orange {
+  @apply bg-[#fc7417];
+}
+
+.bg-gray {
+  @apply bg-[#6e7482];
+}
+
+.bg-green {
+  @apply bg-green-500;
+}
+
+.text-orange {
+  @apply text-[#fc7417];
+}
+
+.text-blue {
+  @apply text-[#004cf4];
+}
+
+.text-light-blue {
+  @apply text-[#428bca];
+}
+
+.text-gray {
+  @apply text-gray-500;
+}
+
+.font-14 {
+  @apply text-[14px] font-semibold;
+}
+
+.font-12 {
+  @apply text-[12px];
+}
+/* other styles */
+
+/* login page */
+.login-bg-img {
+  background-image: url("./assets/images/bg_image.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: brightness(0.8);
+}
+
+.bottom-icons-container {
+  @apply w-[120px] h-[35px] bg-[rgb(23_31_113)] p-2 rounded-md shadow;
+}
+
+.login-bg {
+  @apply bg-[rgb(23_31_113)];
+}
+
+/* side bar */
+
+.active-menu {
+  @apply bg-blue-300/10 font-semibold text-[#fc7417] border-l-4 border-l-[#fc7417] rounded-l-sm;
+}
+
+/* PAGES */
+.page-container {
+  @apply w-full p-2 bg-slate-50 h-screen overflow-auto;
+}
+
+.card {
+  @apply shadow rounded-sm;
+}
+
+.checkbox-input {
+  @apply w-5 h-5 border-1 border-gray-300 rounded-xl checked:bg-blue-500 checked:border-blue-500 checked:text-white;
+}

@@ -1,0 +1,33 @@
+.placeholder-steetview{
+    padding: 20px;
+}
+
+.leaflet-autocomplete {
+    width: 260px;
+    height: 27px;
+    position: relative;
+    top: -2px;
+    outline: none !important;
+    border: none !important;
+}
+
+
+.playback-slider-live{
+    position: absolute;
+    top: auto !important;
+    bottom: 28px !important;
+    margin: 0px 26px !important;
+    background: #fff;
+    padding: 10px;
+    box-shadow: 8px 4px 20px 0px #989898;
+    border-radius: 10px;
+    z-index: 1;
+    width: 58%;
+    z-index: 3;
+}
+
+.gm-style-iw{
+    width: 100% !important;
+    max-width : 320px !important;
+    /* min-width: 320px !important; */
+}

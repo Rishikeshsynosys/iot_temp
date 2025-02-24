@@ -1,0 +1,11 @@
+.mui-date-picker fieldset:not(.visible){
+    visibility: hidden !important;
+  }
+  .mui-date-picker input {
+    padding: 0px 0px 0px 10px !important;
+    font-size: 13px !important;
+  }
+  .mui-date-picker svg {
+   height: 0.8em !important;
+   width: 0.8em !important;
+  }
