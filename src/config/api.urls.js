@@ -11,7 +11,7 @@ const __init__ = () => {
     }
 
     if (window.location.origin.match("localhost:")) {
-        return ALPHA_URL;
+        return BETA_URL;
     }
 
     return BETA_URL;
@@ -23,7 +23,7 @@ export const LOCAL_BACKEND = "http://localhost:6060";
 
 const getAPIUrl = () =>
     window.location.href.match("localhost") !== null
-        ? LOCAL_BACKEND
+        ? MAIN_DOMAIN_URL
         : MAIN_DOMAIN_URL;
 
 export const LARAVEL_BASE_URL = MAIN_DOMAIN_URL;

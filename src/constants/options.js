@@ -28,3 +28,5 @@ export const reportOptions = [
         title : "Unutilized Machines Report"
     }
 ];
+
+export const getReportName = (reportID) => reportOptions?.find((report) => report.value === +reportID).name

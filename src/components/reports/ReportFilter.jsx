@@ -6,7 +6,7 @@ import SelectBox from "../UI/SelectBox";
 import { reportOptions } from "../../constants/options";
 import Button from "../UI/Button";
 
-const ReportFilter = ({ onCreateReport }) => {
+const ReportFilter = ({ onCreateReport, isLoading }) => {
   const [fromDate, setFromDate] = useState(dayjs().startOf("day"));
   const [toDate, setToDate] = useState(dayjs().endOf("day"));
   const [selectedReport, setSelectedReport] = useState("");
@@ -61,6 +61,7 @@ const ReportFilter = ({ onCreateReport }) => {
               reportID: selectedReport,
             })
           }
+          isSubmitting={isLoading}
         >
           Create Report
         </Button>

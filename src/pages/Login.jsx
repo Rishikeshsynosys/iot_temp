@@ -16,7 +16,7 @@ import { ShowNotification } from "../services/ShowNotification";
 import {
   LaravelRequestHandler,
   NodeRequestHandler,
-} from "../services/requests";
+} from "../services/Requests";
 
 import $ from "jquery";
 import { MAIN_DOMAIN_URL } from "../config/api.urls";
@@ -148,18 +148,18 @@ const LoginPage = () => {
       const success = await LaravelRequestHandler(postLogin, data);
 
       // valid iot user
-      const isValidIOTUser = await NodeRequestHandler(validateUser, {
-        username: data.user_name,
-        organization: success?.user?.organisation?.id,
-      });
+      // const isValidIOTUser = await NodeRequestHandler(validateUser, {
+      //   username: data.user_name,
+      //   organization: success?.user?.organisation?.id,
+      // });
 
-      if (!isValidIOTUser) {
-        ShowNotification(
-          "error",
-          "You are not authorized to access IOT Application."
-        );
-        return;
-      }
+      // if (!isValidIOTUser) {
+      //   ShowNotification(
+      //     "error",
+      //     "You are not authorized to access IOT Application."
+      //   );
+      //   return;
+      // }
 
       // for adding user to Users
       if (success && success?.user) {
